@@ -11,3 +11,4 @@ deaths_rate_ages_45_59_years,measure,Age-standardized deaths rate per 100000 peo
 deaths_rate_ages_60plus_years,measure,Age-standardized deaths rate per 100000 people aged 60plus years
 deaths_rate_all_ages,measure,Age-standardized deaths rate for people all ages
 deaths_rate_all_ages_alt,measure,crude deaths rate for people all ages
+deaths_all_ages,measure,total deaths number for all ages

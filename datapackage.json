@@ -5,7 +5,7 @@
         "id": "en"
     },
     "author": "Gapminder",
-    "created": "2018-09-20T02:31:09.295838+00:00",
+    "created": "2018-09-20T03:23:35.808929+00:00",
     "description": "WHO VIP dataset",
     "license": "CC-BY-4.0",
     "title": "WHO VIP dataset",
@@ -28,6 +28,35 @@
                     }
                 ],
                 "primaryKey": "concept"
+            }
+        },
+        {
+            "path": "ddf--datapoints--deaths_all_ages--by--country--year--cause--sex.csv",
+            "name": "ddf--datapoints--deaths_all_ages--by--country--year--cause--sex",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "year"
+                    },
+                    {
+                        "name": "cause"
+                    },
+                    {
+                        "name": "sex"
+                    },
+                    {
+                        "name": "deaths_all_ages"
+                    }
+                ],
+                "primaryKey": [
+                    "country",
+                    "year",
+                    "cause",
+                    "sex"
+                ]
             }
         },
         {
@@ -330,6 +359,18 @@
             }
         ],
         "datapoints": [
+            {
+                "primaryKey": [
+                    "cause",
+                    "country",
+                    "sex",
+                    "year"
+                ],
+                "value": "deaths_all_ages",
+                "resources": [
+                    "ddf--datapoints--deaths_all_ages--by--country--year--cause--sex"
+                ]
+            },
             {
                 "primaryKey": [
                     "cause",
