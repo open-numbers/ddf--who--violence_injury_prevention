@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pandas as pd
+import numpy as np
 import os.path as osp
 from ddf_utils.str import to_concept_id
 
@@ -65,7 +66,7 @@ def rate(deaths, pop, pop_div, gs):
     for r in res:
         r0 = r0.append(r)
     r0 = r0.groupby(level=[0, 1, 2]).sum(min_count=len(gs)) * 100000  # all group should have data.
-    return r0.dropna()
+    return r0.replace(0.0, np.nan).dropna()
 
 
 def calc(death, pop, stdPop, stdPopSum):
