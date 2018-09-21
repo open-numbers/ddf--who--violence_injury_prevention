@@ -64,7 +64,7 @@ def rate(deaths, pop, pop_div, gs):
     r0 = res.pop()
     for r in res:
         r0 = r0.append(r)
-    r0 = r0.groupby(level=[0, 1, 2]).sum(min_count=len(gs)-1) * 100000
+    r0 = r0.groupby(level=[0, 1, 2]).sum(min_count=len(gs)) * 100000  # all group should have data.
     return r0.dropna()
 
 
