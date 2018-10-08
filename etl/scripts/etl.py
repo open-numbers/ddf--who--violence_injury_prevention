@@ -35,9 +35,26 @@ def extract(df, concepts_mapping, cause_mapping):
     df.columns = df.columns.map(concepts_mapping)
     df.cause = df.cause.map(cause_mapping)
 
-    df = df.groupby(['country', 'year', 'cause', 'sex']).agg("sum")
+    cause_mapping_grouped = dict()
+    for k, v in cause_mapping.items():
+        if v not in cause_mapping_grouped.keys():
+            cause_mapping_grouped[v] = [k]
+        else:
+            cause_mapping_grouped[v].append(k)
 
-    return df
+    res = []
+
+    for cause, idx in df.groupby('cause').groups.items():
+        df_cause = df.loc[idx].copy()
+        df_cause = df_cause.drop('cause', axis=1)
+        min_count = 0.75 * len(cause_mapping_grouped[cause])
+        df_new = df_cause.groupby(['country', 'year', 'sex']).agg("sum", min_count=min_count)
+        df_new['cause'] = cause
+        df_new = df_new.set_index('cause', append=True)
+        df_new.reorder_levels(['country', 'year', 'cause', 'sex'])
+        res.append(df_new)
+
+    return pd.concat(res)
 
 
 def rate(deaths, pop, pop_div, gs):
