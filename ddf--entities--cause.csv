@@ -1,4 +1,4 @@
-cause,name
-traffic,Road traffic accidents
-suicide,Self-inflicted injuries
-homicide,Homicide
+name,cause
+Road traffic accidents,traffic
+Homicide,homicide
+Self-inflicted injuries,suicide

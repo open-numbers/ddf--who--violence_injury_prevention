@@ -1,14 +1,12 @@
-concept,concept_type,name
-country,entity_domain,Country
-sex,entity_domain,Sex
-cause,entity_domain,Cause
-year,time,Year
-name,string,Name
-deaths_rate_ages_0_14_years,measure,Age-standardized deaths rate per 100000 people aged 0-14 years
-deaths_rate_ages_15_29_years,measure,Age-standardized deaths rate per 100000 people aged 15-29 years
-deaths_rate_ages_30_44_years,measure,Age-standardized deaths rate per 100000 people aged 30-44 years
-deaths_rate_ages_45_59_years,measure,Age-standardized deaths rate per 100000 people aged 45-59 years
-deaths_rate_ages_60plus_years,measure,Age-standardized deaths rate per 100000 people aged 60plus years
-deaths_rate_all_ages,measure,Age-standardized deaths rate for people all ages
-deaths_rate_all_ages_alt,measure,crude deaths rate for people all ages
-deaths_all_ages,measure,total deaths number for all ages
+concept,name,concept_type
+ratedall,ratedall,measure
+rated_0_14,rated_0_14,measure
+rated_15_29,rated_15_29,measure
+rated_30_44,rated_30_44,measure
+rated_45_59,rated_45_59,measure
+rated_60,rated_60+,measure
+country,Country,entity_domain
+sex,Sex,entity_domain
+cause,Cause,entity_domain
+year,Year,time
+name,Name,string
