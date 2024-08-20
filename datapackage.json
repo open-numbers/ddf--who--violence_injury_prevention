@@ -1,20 +1,13 @@
 {
-    "name": "ddf--who--violence_injury_prevention",
     "language": {
         "name": "English",
-        "id": "en"
+        "id": "en-US"
     },
-    "author": "Gapminder",
-    "created": "2018-10-20T06:28:33.340720+00:00",
-    "description": "WHO VIP dataset",
-    "license": "CC-BY-4.0",
-    "title": "WHO VIP dataset",
-    "translations": [],
-    "version": "0.0.1",
+    "created": "2024-08-20T03:16:17.945Z",
     "resources": [
         {
-            "path": "ddf--concepts.csv",
             "name": "ddf--concepts",
+            "path": "ddf--concepts.csv",
             "schema": {
                 "fields": [
                     {
@@ -27,12 +20,65 @@
                         "name": "concept_type"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
             }
         },
         {
-            "path": "ddf--datapoints--rated_0_14--by--country--year--cause--sex.csv",
+            "name": "ddf--entities--cause",
+            "path": "ddf--entities--cause.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "name"
+                    },
+                    {
+                        "name": "cause"
+                    }
+                ],
+                "primaryKey": [
+                    "cause"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--country",
+            "path": "ddf--entities--country.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "country"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": [
+                    "country"
+                ]
+            }
+        },
+        {
+            "name": "ddf--entities--sex",
+            "path": "ddf--entities--sex.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "sex"
+                    },
+                    {
+                        "name": "name"
+                    }
+                ],
+                "primaryKey": [
+                    "sex"
+                ]
+            }
+        },
+        {
             "name": "ddf--datapoints--rated_0_14--by--country--year--cause--sex",
+            "path": "ddf--datapoints--rated_0_14--by--country--year--cause--sex.csv",
             "schema": {
                 "fields": [
                     {
@@ -60,8 +106,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--rated_15_29--by--country--year--cause--sex.csv",
             "name": "ddf--datapoints--rated_15_29--by--country--year--cause--sex",
+            "path": "ddf--datapoints--rated_15_29--by--country--year--cause--sex.csv",
             "schema": {
                 "fields": [
                     {
@@ -89,8 +135,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--rated_30_44--by--country--year--cause--sex.csv",
             "name": "ddf--datapoints--rated_30_44--by--country--year--cause--sex",
+            "path": "ddf--datapoints--rated_30_44--by--country--year--cause--sex.csv",
             "schema": {
                 "fields": [
                     {
@@ -118,8 +164,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--rated_45_59--by--country--year--cause--sex.csv",
             "name": "ddf--datapoints--rated_45_59--by--country--year--cause--sex",
+            "path": "ddf--datapoints--rated_45_59--by--country--year--cause--sex.csv",
             "schema": {
                 "fields": [
                     {
@@ -147,8 +193,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--rated_60--by--country--year--cause--sex.csv",
             "name": "ddf--datapoints--rated_60--by--country--year--cause--sex",
+            "path": "ddf--datapoints--rated_60--by--country--year--cause--sex.csv",
             "schema": {
                 "fields": [
                     {
@@ -176,8 +222,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--ratedall--by--country--year--cause--sex.csv",
             "name": "ddf--datapoints--ratedall--by--country--year--cause--sex",
+            "path": "ddf--datapoints--ratedall--by--country--year--cause--sex.csv",
             "schema": {
                 "fields": [
                     {
@@ -202,51 +248,6 @@
                     "cause",
                     "sex"
                 ]
-            }
-        },
-        {
-            "path": "ddf--entities--cause.csv",
-            "name": "ddf--entities--cause",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "name"
-                    },
-                    {
-                        "name": "cause"
-                    }
-                ],
-                "primaryKey": "cause"
-            }
-        },
-        {
-            "path": "ddf--entities--country.csv",
-            "name": "ddf--entities--country",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "country"
-                    },
-                    {
-                        "name": "name"
-                    }
-                ],
-                "primaryKey": "country"
-            }
-        },
-        {
-            "path": "ddf--entities--sex.csv",
-            "name": "ddf--entities--sex",
-            "schema": {
-                "fields": [
-                    {
-                        "name": "sex"
-                    },
-                    {
-                        "name": "name"
-                    }
-                ],
-                "primaryKey": "sex"
             }
         }
     ],
